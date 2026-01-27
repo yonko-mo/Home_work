@@ -19,7 +19,6 @@ void main() {
 
   print('DEBUG MODE: $upperValue');
 
-  // الشرط
   if (upperValue == 'TRUE') {
     print('Prod ready');
   } else {

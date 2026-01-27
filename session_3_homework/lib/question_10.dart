@@ -7,7 +7,7 @@ void main() {
   Map<String, String> countryCodes = {'EG': 'Egypt','SA':'Saudi Arabia'};
   print("The country code for \'EG\' is ${countryCodes['EG']}");
   countryCodes['QA'] = 'Qatar';
-  print("Length: ${countryCodes.length}");
+  print("Length: ${countryCodes.entries.length}");
   bool JordanExists = countryCodes.containsKey('JO');
   if (!JordanExists) {
     print('Jordan missing');

@@ -4,9 +4,9 @@ Create a program with a setting called API_URL that is empty. If it is empty, re
 'https://example.com'. Print the new value in capital letters.
 */
 void main() {
-  String API_URL = '';
-  String newApiUrl = API_URL.isEmpty
+  String apiUrl = '';
+  String newApiUrl = apiUrl.isEmpty
       ? 'https://example.com'
-      : API_URL;
+      : apiUrl;
   print(newApiUrl.toUpperCase());
 }

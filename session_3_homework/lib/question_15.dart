@@ -11,11 +11,27 @@ safety where needed.
 /profile --> user data from map
 */
 
+/*
+Question 15
+Write a Dart program that simulates a simple router using a switch statement on a string path ('/',
+'/products', '/profile', or other). Handle each case with appropriate output, including maps and null
+safety where needed.
+*/
+
+/*
+/ --> home page
+/products --> products data from map
+/profile --> user data from map
+*/
+
 import 'dart:io';
 
 void main() {
-  Map<String, String> products = {'1': 'Laptop', '2': 'Phone'};
-  Map<String, String?> profile = {'name': 'Mohamed', 'email': null};
+  Map<String, String> screens = {
+    '/profile': 'profile screen',
+    '/': 'home screen',
+    '/products': 'products screen',
+  };
 
   print('please enter path (/, /products, /profile);');
   String? path = stdin.readLineSync();
@@ -25,16 +41,15 @@ void main() {
   }
   switch (path) {
     case '/':
-      print('Home page');
+      print('display ${screens[path]}');
       break;
     case '/products':
-      print(products);
+      print('display ${screens[path]}');
       break;
     case '/profile':
-      print('Name: ${profile['name']}');
-      print('Email: ${profile['email'] ?? 'Not provided'}');
+      print('display ${screens[path]}');
       break;
     default:
-      print('error 404');
+      print('No screen found');
   }
 }

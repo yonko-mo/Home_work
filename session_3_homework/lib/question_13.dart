@@ -46,6 +46,6 @@ void main() {
       print("Pass");
       break;
     default:
-      print('Invalid grade');
+      print('Failed');
   }
 }

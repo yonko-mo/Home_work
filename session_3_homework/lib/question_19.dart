@@ -6,18 +6,15 @@ once.
 */
 void main() {
   List<String> names = ['mohamed', 'alaa', 'mohamed', 'ahmed'];
-  Set<String> uniqueNames = names.toSet();
   Map<String, int> occurrencesCounts = {};
   for (String name in names) {
-    occurrencesCounts[name] = (occurrencesCounts[name] ?? 0) + 1;
+    if (occurrencesCounts.containsKey(name)) {
+      occurrencesCounts[name] = occurrencesCounts[name]! + 1;
+    } else {
+      occurrencesCounts[name] = 1;
+    }
   }
 
-  if (names.length != uniqueNames.length) {
-    print('Duplicates exist in the list');
-  } else {
-    print('No duplicates in the list');
-  }
-  
   if (occurrencesCounts['mohamed']! > 1) {
     print('mohamed appears more than once');
   } else {

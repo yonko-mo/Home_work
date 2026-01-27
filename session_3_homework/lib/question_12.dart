@@ -8,6 +8,7 @@ import 'dart:io';
 void main() {
   Map<String, String?> person = {'phoneNumber': null};
   String phoneNumber = person['phoneNumber'] ?? 'Unknown';
+  print(phoneNumber);
   person['phoneNumber'] = '01125127125';
   print("Phone number length: ${person['phoneNumber']!.length}");
 }

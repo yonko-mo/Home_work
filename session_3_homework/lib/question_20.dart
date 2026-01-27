@@ -6,30 +6,25 @@ message to print.
 */
 
 void main() {
-  int age = 18;
+  String area = "restricted";
+  int age = 17;
   bool hasParent = false;
-  String area = "general"; 
+  bool hasAccess = false;
 
-  if (age < 18 && !hasParent) {
-    print('Access denied: Parent required');
-    return;
+  if (age >= 18 || hasParent) {
+    hasAccess = true;
   }
 
   switch (area) {
-    case "general":
-      if (age < 18) {
-        print('Access granted with parent to general area');
+    case "restricted":
+      if (hasAccess) {
+        print('allowed');
       } else {
-        print('Access granted to general area');
+        print('not allowed');
       }
       break;
-
-    case "restricted":
-      if (age < 18) {
-        print('Access granted with parent to restricted area');
-      } else {
-        print('Access granted to restricted area');
-      }
+    case 'general':
+      print('allowed');
       break;
 
     default:
